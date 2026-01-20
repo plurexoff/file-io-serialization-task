@@ -27,7 +27,7 @@ def demo_save_user():
     """Демо: сохранить объект User"""
     print("\n👤 Сохранение объекта User...")
     
-    # Нсодание пользователя
+    # Составление пользователя
     user = User(
         user_id=1,
         name="Петр Петров",
@@ -38,7 +38,7 @@ def demo_save_user():
     
     # Сериализация
     PickleSerializer.serialize(user, "user.pkl")
-    print(f"Файл охранен: data/user.pkl")
+    print(f"Файл осхранен: data/user.pkl")
 
 
 def demo_load_user():
@@ -48,7 +48,7 @@ def demo_load_user():
     try:
         user = PickleSerializer.deserialize("user.pkl")
         print(f"Остается объект: {user}")
-        print(fОткрыта: {user.created_at}")
+        print(f"Открыта: {user.created_at}")
     except FileNotFoundError:
         print("✗ Файл не найден. сначала сохраните объект.")
 
@@ -57,7 +57,7 @@ def demo_save_database():
     """Демо: сохранить БД"""
     print("\n💾 Сохранение базы данных...")
     
-    # Осдание базы данных
+    # Составление базы данных
     db = Database()
     
     # Увеличение пользователей
@@ -82,7 +82,7 @@ def demo_save_database():
     
     # сериализация
     PickleSerializer.serialize(db, "database.pkl")
-    print(f"Файл охранен: data/database.pkl")
+    print(f"Файл осхранен: data/database.pkl")
 
 
 def demo_load_database():
@@ -124,7 +124,7 @@ def demo_save_json():
     }
     
     JSONSerializer.serialize(data, "data.json")
-    print(f"Файл охранен: data/data.json")
+    print(f"Файл осхранен: data/data.json")
 
 
 def demo_list_files():
